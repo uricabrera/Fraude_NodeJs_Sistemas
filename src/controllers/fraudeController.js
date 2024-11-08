@@ -43,7 +43,7 @@ const verificarFraude = async (req, res) => {
   try {
     const { user_id } = req.params.user_id;; // Obtener user_id desde los parámetros de la solicitud
     // Obtener ventas desde el endpoint de ventas
-    const response = await axios.get('https://fraudeapi01-braxdrdjc4f4c2hr.centralus-01.azurewebsites.net/api/v1/orders/${user_id}'); 
+    const response = await axios.get(`https://fraudeapi01-braxdrdjc4f4c2hr.centralus-01.azurewebsites.net/api/v1/orders/${user_id}`); 
 // Llamada al microservicio de ventas
     const ventas = response.data;
 
