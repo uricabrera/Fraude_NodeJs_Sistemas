@@ -74,67 +74,70 @@ const { verificarFraude } = require('./controllers/fraudeController');
 app.get('/api/v1/orders/:user_id', (req, res) => {
   const userId = req.params.user_id;
 
-let ventas = [
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 1,
-    fecha: '2024-11-08'
-  },
-  {
-    id: 2,
-    fecha: '2024-11-10'
-  },
-  {
-    id: 2,
-    fecha: '2024-11-10'
-  },
+  let ventas = [
     {
-    id: 3,
-    fecha: '2024-11-05'
-  }
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 1,
+      fecha: '2024-11-08'
+    },
+    {
+      id: 2,
+      fecha: '2024-11-10'
+    },
+    {
+      id: 2,
+      fecha: '2024-11-10'
+    },
+      {
+      id: 3,
+      fecha: '2024-11-05'
+    }
   ];
 
+  console.log("El valor de user_id en params es " + userId);
+  console.log(ventas);
 
-  ventasUsuario = ventas.filter((venta) => venta.id === userId);
+
+  ventasUsuario = ventas.filter((venta) => venta.id == userId);
   res.status(200).json(ventasUsuario);
 });
 
