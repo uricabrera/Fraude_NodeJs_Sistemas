@@ -1,6 +1,11 @@
 const express = require('express');
+const dotenv = require('dotenv');
 const app = express();
-const PORT = 3000;
+
+dotenv.config();
+
+
+const PORT = process.env.PORT || 3000;
 
 // Importar el controlador de fraude
 const { verificarFraude } = require('./controllers/fraudeController');
