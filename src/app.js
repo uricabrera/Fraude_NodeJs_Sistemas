@@ -4,6 +4,65 @@ const app = express();
 
 dotenv.config();
 
+let ventas = [
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 1,
+    fecha: '2024-11-08'
+  },
+  {
+    id: 2,
+    fecha: '2024-11-10'
+  },
+  {
+    id: 2,
+    fecha: '2024-11-10'
+  },
+    {
+    id: 3,
+    fecha: '2024-11-05'
+  }
+  ];
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -15,7 +74,7 @@ const { verificarFraude } = require('./controllers/fraudeController');
 app.get('/api/v1/orders/:user_id', (req, res) => {
   const userId = req.params.user_id;
 
-const ventas = [
+let ventas = [
   {
     id: 1,
     fecha: '2024-11-08'
